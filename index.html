@@ -4,151 +4,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Antigravity: The powerful agentic AI coding assistant by Google Deepmind. Redefining autonomous software engineering in the era of Advanced Agentic Coding.">
-    <title>Antigravity | Beyond Future Coding</title>
+    <meta name="description" content="Antigravity: Autonomous software engineering at scale.">
+    <title>Antigravity | Autonomous Engineering</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="container">
+    <div class="noise-overlay"></div>
+    <div class="glow-bg"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
             <div class="logo">
-                <img src="assets/logo.png" alt="Antigravity Logo" id="site-logo">
-                <span class="logo-text">ANTIGRAVITY</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M12 10L7 20H17L12 10Z" fill="currentColor" />
+                </svg>
+                <span class="logo-text">Antigravity</span>
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                </ul>
-            </nav>
-            <div class="cta-wrapper">
-                <a href="#" class="btn btn-secondary" id="nav-login-btn">Login</a>
-                <a href="#" class="btn btn-primary" id="nav-get-started-btn">Get Started</a>
+            <div class="nav-links">
+                <a href="#product">Product</a>
+                <a href="#infrastructure">Infrastructure</a>
+                <a href="#research">Research</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost" id="btn-login">Log in</a>
+                <a href="#" class="btn-primary" id="btn-deploy">Get Access</a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="hero-background">
-                <img src="assets/hero.png" alt="Futuristic workspace" class="hero-img">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="container hero-content">
-                <div class="badge fade-in">Advanced Agentic Coding</div>
-                <h1 class="fade-in-delayed">Coding at <span>Zero Gravity.</span></h1>
-                <p class="fade-in-more-delayed">Experience Antigravity: The autonomous agentic AI designed by Google
-                    Deepmind to solve, build, and optimize your codebase while you focus on the vision.</p>
-                <div class="hero-actions fade-in-more-delayed">
-                    <a href="#" class="btn btn-primary btn-large" id="hero-launch-btn">Launch Agent</a>
-                    <a href="#" class="btn btn-outline btn-large" id="hero-docs-btn">View Documentation</a>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge fade-up">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Antigravity Core v2.0 Live</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                    <h1 class="fade-up stagger-1">Software engineering,<br><span class="text-gradient">fully
+                            autonomous.</span></h1>
+                    <p class="fade-up stagger-2">Antigravity is not a copilot. It is an agentic engineering system built
+                        by Deepmind that plans, implements, tests, and deploys production-ready codebase
+                        transformations.</p>
+                    <div class="hero-cta fade-up stagger-3">
+                        <a href="#" class="btn-primary btn-lg" id="btn-start">Start Building</a>
+                        <a href="#" class="btn-outline btn-lg" id="btn-docs">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="9" y1="3" x2="9" y2="21" />
+                            </svg>
+                            Read the Docs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-up stagger-4">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="terminal-title">~/projects/antigravity - agent-core.ts</div>
+                            <div class="terminal-spacer"></div>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code><span class="keyword">import</span> { Agent, Orchestrator } <span class="keyword">from</span> <span class="string">'@antigravity/core'</span>;
+
+<span class="keyword">const</span> engine = <span class="keyword">new</span> Orchestrator({
+  models: [<span class="string">'gemini-pro-agent'</span>],
+  context_window: <span class="number">2_000_000</span>,
+  mode: <span class="string">'autonomous'</span>
+});
+
+<span class="comment">// Synthesizing macro-architecture and resolving dependencies...</span>
+<span class="keyword">await</span> engine.execute({
+  task: <span class="string">'Migrate authentication to zero-trust OAuth 2.0 flow'</span>,
+  target_dir: <span class="string">'./src/auth'</span>,
+  run_tests_until_pass: <span class="boolean">true</span>,
+  auto_deploy: <span class="boolean">true</span>
+});
+
+<span class="terminal-output">> Execution complete in 42.1s (9 files modified, 12 tests passed)</span>
+<span class="terminal-cursor">_</span></code></pre>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="features" id="features">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Engineered for Autonomy</h2>
-                    <p>Antigravity doesn't just suggest code. It thinks, plans, and executes across your entire stack.
-                    </p>
+        <section class="section showcase" id="product">
+            <div class="section-container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title">Cognitive engineering at scale.</h2>
+                    <p class="section-subtitle">A unified architecture designed to handle everything from targeted
+                        micro-refactors to massive, repository-wide migrations with perfect context.</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Autonomous Workflows</h3>
-                        <p>Self-correcting agents that manage background tasks, deployments, and testing without
-                            supervision.</p>
+
+                <div class="bento-grid">
+                    <div class="bento-item bento-large fade-up">
+                        <div class="bento-content">
+                            <h3>Hyper-Dimensional Context</h3>
+                            <p>Antigravity ingests your entire monorepo, reading millions of tokens to ensure perfect
+                                alignment with your architectural patterns, domain logic, and deeply nested
+                                dependencies.</p>
+                        </div>
+                        <div class="bento-visual">
+                            <div class="context-visual">
+                                <!-- Minimal abstract visualization -->
+                                <div class="pulse-ring"></div>
+                                <div class="pulse-ring delay-1"></div>
+                                <div class="pulse-ring delay-2"></div>
+                                <div class="core-node"></div>
+                                <div class="branch-node n1"></div>
+                                <div class="branch-node n2"></div>
+                                <div class="branch-node n3"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <h3>Deep Context Awareness</h3>
-                        <p>Understands your entire repository architecture, following your design patterns and coding
-                            style perfectly.</p>
+
+                    <div class="bento-item fade-up">
+                        <div class="bento-content">
+                            <h3>Self-Healing Execution</h3>
+                            <p>Automatically detects failing CI/CD tests and compiler errors, iterating recursively
+                                until the build is deterministic and green.</p>
+                        </div>
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                                <path d="M3 3v5h5" />
+                                <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                                <path d="M16 21v-5h5" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Infinite Scalability</h3>
-                        <p>Deploy multiple specialized agents to handle frontend, backend, and infrastructure in
-                            parallel.</p>
+
+                    <div class="bento-item fade-up">
+                        <div class="bento-content">
+                            <h3>Parallel Subagents</h3>
+                            <p>Spawns specialized asynchronous subagents to work on frontend components, backend logic,
+                                and infrastructure concurrently.</p>
+                        </div>
+                        <div class="bento-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="capabilities" id="capabilities">
-            <div class="container flex-layout">
-                <div class="cap-text">
-                    <div class="badge">Performance</div>
-                    <h2>Unrivaled Reasoning Power</h2>
-                    <p>Built on the latest Deepmind research in Advanced Agentic Coding, Antigravity handles complex
-                        refactoring and multi-file logic changes that stymie traditional AI assistants.</p>
-                    <ul class="cap-list">
-                        <li>Multi-agent coordination</li>
-                        <li>Self-healing codebase maintenance</li>
-                        <li>Real-time architectural analysis</li>
-                    </ul>
-                </div>
-                <div class="cap-visual">
-                    <img src="assets/features.png" alt="Antigravity Core Visualization" class="floating">
+        <section class="section metrics">
+            <div class="section-container">
+                <div class="metrics-grid">
+                    <div class="metric-item fade-up">
+                        <div class="metric-value">2M+</div>
+                        <div class="metric-label">Token Context Window</div>
+                    </div>
+                    <div class="metric-item fade-up stagger-1">
+                        <div class="metric-value">98.4%</div>
+                        <div class="metric-label">Test Passing Rate on First Iteration</div>
+                    </div>
+                    <div class="metric-item fade-up stagger-2">
+                        <div class="metric-value">&lt;50ms</div>
+                        <div class="metric-label">Inference Latency Target</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="vision" id="vision">
-            <div class="container glass-card">
-                <h2>The Future is Agentic</h2>
-                <p>We are moving beyond co-pilots. Antigravity represents the leap to full autonomous orchestration,
-                    where AI understands not just the 'how', but the 'why' of your software.</p>
-                <a href="#" class="btn btn-primary" id="vision-join-btn">Join the Beta</a>
+        <section class="section cta-section">
+            <div class="cta-container fade-up">
+                <h2>Ready to augment your engineering team?</h2>
+                <p>Deploy Antigravity into your repositories today.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary btn-lg">Request Access</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">
-                        <img src="assets/logo.png" alt="Antigravity Logo">
-                        <span class="logo-text">ANTIGRAVITY</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="logo-text">Antigravity</span>
                     </div>
-                    <p>Designed by Google Deepmind<br>Advanced Agentic Coding Group</p>
+                    <p>A Deepmind AI Initiative.</p>
                 </div>
-                <div class="footer-nav">
-                    <div class="nav-col">
-                        <h4>Product</h4>
-                        <a href="#">Features</a>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <a href="#">Agent Core</a>
+                        <a href="#">CLI Tool</a>
                         <a href="#">Security</a>
-                        <a href="#">Pricing</a>
                     </div>
-                    <div class="nav-col">
+                    <div class="link-group">
                         <h4>Company</h4>
                         <a href="#">About</a>
                         <a href="#">Careers</a>
                         <a href="#">Blog</a>
                     </div>
-                    <div class="nav-col">
-                        <h4>Resources</h4>
-                        <a href="#">Docs</a>
-                        <a href="#">Community</a>
-                        <a href="#">API</a>
+                    <div class="link-group">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Google Deepmind. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#">Twitter</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Discord</a>
-                </div>
             </div>
         </div>
     </footer>
