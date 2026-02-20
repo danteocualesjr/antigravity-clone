@@ -49,6 +49,7 @@ h1 {
 h1 span {
     background: linear-gradient(90deg, var(--secondary), var(--primary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -90,9 +91,10 @@ p {
 }
 
 #site-logo {
-    height: 40px;
+    height: 32px;
     width: auto;
-    filter: drop-shadow(0 0 10px var(--secondary-glow));
+    filter: drop-shadow(0 0 8px var(--secondary-glow));
+    border-radius: 4px;
 }
 
 .logo-text {
@@ -421,20 +423,39 @@ p {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.fade-in { animation: fadeInUp 0.8s ease forwards; }
-.fade-in-delayed { animation: fadeInUp 0.8s ease 0.2s forwards; opacity: 0; }
-.fade-in-more-delayed { animation: fadeInUp 0.8s ease 0.4s forwards; opacity: 0; }
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in-delayed {
+    animation: fadeInUp 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.fade-in-more-delayed {
+    animation: fadeInUp 0.8s ease 0.4s forwards;
+    opacity: 0;
+}
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .floating {
@@ -443,11 +464,34 @@ p {
 
 /* Responsive */
 @media (max-width: 968px) {
-    h1 { font-size: 3.5rem; }
-    h2 { font-size: 2.5rem; }
-    .flex-layout { flex-direction: column; gap: 3rem; }
-    .features-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .footer-top { flex-direction: column; gap: 3rem; }
-    .footer-nav { gap: 2rem; flex-wrap: wrap; }
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex-layout {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .footer-nav {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
 }
